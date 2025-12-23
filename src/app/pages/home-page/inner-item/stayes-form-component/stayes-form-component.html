@@ -1,0 +1,167 @@
+<!--
+<div class="container">
+  <div class="inner">
+    <div class="element destination">
+      <mat-icon>king_bed</mat-icon>
+      <input class="search" type="search" placeholder="search here">
+    </div>
+  <div class="separator"></div>
+    <div class="element dates">
+
+      <mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div matIconButton [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="element visitor ">
+      <mat-icon>person</mat-icon>
+      <div>
+          <span class="visitor-data">2 adults</span>.
+        <span class="visitor-data">0 children</span>.
+        <span class="visitor-data">1 room</span>
+      </div>
+    <mat-icon>arrow_drop_down</mat-icon>
+    </div>
+
+    <mat-menu #menu="matMenu">
+        <div class="visitor-widget">
+          <div class="row-element">
+            <div class="left-side">
+              <span>Adults</span>
+            </div>
+            <div class="right-side">
+              <div class="widget">
+                <button class="min tool-btn">-</button>
+                <span>2</span>
+                <button class="max tool-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="row-element">
+            <div class="left-side">
+              <span>Children</span>
+            </div>
+            <div class="right-side">
+              <div class="widget">
+                <button class="min tool-btn">-</button>
+                <span>2</span>
+                <button class="max tool-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="row-element">
+            <div class="left-side">
+              <span>Rooms</span>
+            </div>
+            <div class="right-side">
+              <div class="widget">
+                <button class="min tool-btn">-</button>
+                <span>2</span>
+                <button class="max tool-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <button class="done-btn">Done</button>
+
+        </div>
+    </mat-menu>
+
+
+
+    <div class="separator"></div>
+    <div class="search-button">
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
+
+</div>
+-->
+
+<div class="container">
+  <div class="inner">
+    <div class="element destination">
+      <mat-icon>king_bed</mat-icon>
+      <input placeholder="search here" type="search" class="search">
+    </div>
+    <div class="separator"></div>
+    <div class="element dates">
+      <!--<mat-form-field>
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date">
+          <input matEndDate placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>-->
+
+    </div>
+    <div class="separator"></div>
+    <div [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="element visitors">
+      <mat-icon>person</mat-icon>
+      <div>
+        <span class="visitors-data">2 adults</span>.
+        <span class="visitors-data">0 children</span>.
+        <span class="visitors-data">1 room</span>
+      </div>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+
+    <mat-menu #menu="matMenu">
+      <div class="visitor-widget">
+        <div class="row-element">
+          <div class="left-side">
+            <span>Adults</span>
+          </div>
+          <div class="right-side">
+            <div class="widget">
+              <button class="min tool-btn">-</button>
+              <span>5</span>
+              <button class="max tool-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="row-element">
+          <div class="left-side">
+            <span>Children</span>
+          </div>
+          <div class="right-side">
+            <div class="widget">
+              <button class="min tool-btn">-</button>
+              <span>5</span>
+              <button class="max tool-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="row-element">
+          <div class="left-side">
+            <span>Rooms</span>
+          </div>
+          <div class="right-side">
+            <div class="widget">
+              <button class="min tool-btn">-</button>
+              <span>5</span>
+              <button class="max tool-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="done">Done</button>
+      </div>
+    </mat-menu>
+    <div class="separator"></div>
+    <div class="element search-button">
+      <button class="search-btn" routerLink="/search">
+        Search
+      </button>
+    </div>
+  </div>
+</div>
