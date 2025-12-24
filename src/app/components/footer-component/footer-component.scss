@@ -1,0 +1,393 @@
+/*
+
+The MIT License
+
+Copyright (c) 2025 0xERR0R - https://codepen.io/0xERR0R
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+footer {
+  background: var(--midnight-plum);
+}
+
+.footer-section-brandName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+.footer-section-brandSlogan {
+  font-family: 'Pacifico', handwriting;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--off-white);
+}
+
+a.icon-link svg {
+  fill: var(--lilac-dream);
+}
+
+a.icon-link:hover svg {
+  animation: Buzz0xERR0R 0.75s linear 1;
+}
+
+@keyframes Buzz0xERR0R {
+  10% {
+    transform: translateX(0.1875rem) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-0.1875rem) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(0.125rem) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-0.125rem) rotate(-1deg);
+  }
+  70% {
+    transform: translateX(0.125rem) rotate(1deg);
+  }
+  80% {
+    transform: translateX(-0.125rem) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(0.0625rem) rotate(0);
+  }
+  100% {
+    transform: translateX(-0.0625rem) rotate(0deg);
+  }
+}
+
+a.icon-link:focus svg {
+  fill: var(--lavender-mist);
+}
+
+.footer-section-top-column-one .column-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--off-white);
+}
+
+.footer-section-top-column-one {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.footer-section-top-column-one a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.footer-section-top-column-one a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.footer-section-top-column-one a:hover::after {
+  width: 100%;
+}
+
+.footer-section-top-column-one a:focus {
+  color: var(--lavender-mist);
+}
+
+.footer-section-top-column-two .column-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--off-white);
+}
+
+.footer-section-top-column-two {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.footer-section-top-column-two a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.footer-section-top-column-two a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.footer-section-top-column-two a:hover::after {
+  width: 100%;
+}
+
+.footer-section-top-column-two a:focus {
+  color: var(--lavender-mist);
+}
+
+.footer-section-top-column-three .column-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--off-white);
+}
+
+.footer-section-top-column-three {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.footer-section-top-column-three a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.footer-section-top-column-three a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.footer-section-top-column-three a:hover::after {
+  width: 100%;
+}
+
+.footer-section-top-column-three a:focus {
+  color: var(--lavender-mist);
+}
+
+.footer-section-top-column-four .column-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--off-white);
+}
+
+.footer-section-top-column-four {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+.footer-section-top-column-four a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.footer-section-top-column-four a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.footer-section-top-column-four a:hover::after {
+  width: 100%;
+}
+
+.footer-section-top-column-four a:focus {
+  color: var(--lavender-mist);
+}
+
+.footer-section-middle-start-line {
+  width: 100%;
+  height: 0.063rem;
+  margin-top: 1.75rem;
+  margin-right: 1.75rem;
+  opacity: 0.1;
+  background: var(--off-white);
+}
+
+.footer-section-middle-brandLogo {
+  opacity: 0.1;
+  fill: var(--off-white);
+}
+
+.footer-section-middle-end-line {
+  width: 100%;
+  height: 0.063rem;
+  margin-top: 1.75rem;
+  margin-left: 1.75rem;
+  opacity: 0.1;
+  background: var(--off-white);
+}
+
+.footer-section-bottom {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.copyright {
+  color: var(--off-white);
+}
+
+.copyright a {
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.copyright a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.copyright a:hover::after {
+  width: 100%;
+}
+
+.copyright a:focus {
+  color: var(--lavender-mist);
+}
+
+.terms-and-conditions a {
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.terms-and-conditions a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.terms-and-conditions a:hover::after {
+  width: 100%;
+}
+
+.terms-and-conditions a:focus {
+  color: var(--lavender-mist);
+}
+
+.privacy-policy a {
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.privacy-policy a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.privacy-policy a:hover::after {
+  width: 100%;
+}
+
+.privacy-policy a:focus {
+  color: var(--lavender-mist);
+}
+
+.cookie-policy a {
+  text-decoration: none;
+  color: var(--lilac-dream);
+  position: relative;
+}
+
+.cookie-policy a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lilac-dream);
+  position: absolute;
+}
+
+.cookie-policy a:hover::after {
+  width: 100%;
+}
+
+.cookie-policy a:focus {
+  color: var(--lavender-mist);
+}
+
+.credit {
+  color: var(--off-white);
+}
+
+.credit a {
+  text-decoration: none;
+  color: var(--lemon-zest);
+  position: relative;
+}
+
+.credit a::after {
+  content: "";
+  width: 0;
+  height: 0.125rem;
+  left: 0;
+  bottom: 0;
+  transition: width .4s ease;
+  background: var(--lemon-zest);
+  position: absolute;
+}
+
+.credit a:hover::after {
+  width: 100%;
+}
+
+#heartbeat {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  fill: var(--crimson-red);
+  animation: heartbeat .25s infinite alternate;
+}
+
+@keyframes heartbeat {
+  to {
+    transform: scale(1.2);
+  }
+}
