@@ -1,7 +1,25 @@
+<!--
 <h2 mat-dialog-title>Map View</h2>
 <mat-dialog-content class="mat-typography">
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+-->
+
+<h2 mat-dialog-title>Map View</h2>
+<google-map
+  height="400px"
+  width="100%"
+  [center]="center"
+  [zoom]="zoom">
+  <map-marker
+    *ngFor="let loc of locations"
+    [position]="{lat: loc.latitude, lng: loc.longitude}"
+    [title]="loc.title">
+  </map-marker>
+</google-map>
+<mat-dialog-actions align="end">
+  <button matButton mat-dialog-close>Cancel</button>
 </mat-dialog-actions>
