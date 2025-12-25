@@ -8,6 +8,8 @@ import {RegisterVerification} from './pages/security/register-verification/regis
 import {ForgotPassword} from './pages/security/forgot-password/forgot-password';
 import {ResetPwdVerification} from './pages/security/reset-pwd-verification/reset-pwd-verification';
 import {ResetPwd} from './pages/security/reset-pwd/reset-pwd';
+import {Settings} from './pages/settings/settings';
+import {SearchResult} from './pages/search-result/search-result';
 
 export const routes: Routes = [
   {
@@ -34,13 +36,25 @@ export const routes: Routes = [
       {path: 'forgot-password', component:ForgotPassword},
       {path: 'register-verification/:email', component:RegisterVerification},
       {path: 'reset-pwd-verification/:email', component: ResetPwdVerification},
-      {path: 'reset-pwd', component: ResetPwd}
+      {path: 'reset-pwd', component: ResetPwd},
     ]
 
   },
 
   {
+    path: 'search',
+    component: SearchResult,
+  },
+
+  {
+    path: 'settings',
+    component:Settings,
+  },
+
+  {
     path: '**',
     component:NotFoundPage,
-  },
+  }
+
+
 ];

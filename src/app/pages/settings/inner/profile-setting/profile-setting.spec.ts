@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StayesFormComponent } from './stayes-form-component';
+import { ProfileSetting } from './profile-setting';
 
-describe('StayesFormComponent', () => {
-  let component: StayesFormComponent;
-  let fixture: ComponentFixture<StayesFormComponent>;
+describe('ProfileSetting', () => {
+  let component: ProfileSetting;
+  let fixture: ComponentFixture<ProfileSetting>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StayesFormComponent]
+      imports: [ProfileSetting]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StayesFormComponent);
+    fixture = TestBed.createComponent(ProfileSetting);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

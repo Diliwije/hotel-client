@@ -12,33 +12,35 @@ import {
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
+import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-stayes-form-component',
+  selector: 'app-stays-form-component',
   imports: [
-/*
-    MatLabel,
-    MatFormField,
-    MatStartDate,
-    MatEndDate,
-    MatDateRangeInput,
+    /*
+        MatLabel,
+        MatFormField,
+        MatStartDate,
+        MatEndDate,
+        MatDateRangeInput,
 
-    MatDatepickerToggle,
-    MatDateRangePicker,
-*/
+        MatDatepickerToggle,
+        MatDateRangePicker,
+    */
     MatFormFieldModule,
     MatDatepickerModule,
     MatIcon,
     MatMenu,
     // MatMenuItem,
-    MatMenuTrigger
+    MatMenuTrigger,
+    RouterLink
 
   ],
   providers: [provideNativeDateAdapter()],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './stayes-form-component.html',
-  styleUrl: './stayes-form-component.scss',
+  templateUrl: './stays-form-component.html',
+  styleUrl: './stays-form-component.scss',
 })
-export class StayesFormComponent {
+export class StaysFormComponent {
 
 }
