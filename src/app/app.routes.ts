@@ -5,6 +5,9 @@ import {SecurityContext} from './pages/security/security-context/security-contex
 import {Login} from './pages/security/login/login';
 import {Register} from './pages/security/register/register';
 import {RegisterVerification} from './pages/security/register-verification/register-verification';
+import {ForgotPassword} from './pages/security/forgot-password/forgot-password';
+import {ResetPwdVerification} from './pages/security/reset-pwd-verification/reset-pwd-verification';
+import {ResetPwd} from './pages/security/reset-pwd/reset-pwd';
 
 export const routes: Routes = [
   {
@@ -28,7 +31,10 @@ export const routes: Routes = [
       },
       {path: 'login', component:Login} ,
       {path: 'register', component:Register},
-      {path: 'register-verification/:email', component:RegisterVerification}
+      {path: 'forgot-password', component:ForgotPassword},
+      {path: 'register-verification/:email', component:RegisterVerification},
+      {path: 'reset-pwd-verification/:email', component: ResetPwdVerification},
+      {path: 'reset-pwd', component: ResetPwd}
     ]
 
   },

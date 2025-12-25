@@ -1,0 +1,36 @@
+
+.inner{
+  height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+
+  h2{
+    color: var(--light-color);
+    margin: 0;
+  }
+}
+.slot-1{
+  background-image: url("https://cf.bstatic.com/xdata/images/city/600x600/685330.jpg?k=ee4ac422e47649d2d04a9759dc81fa51f138f477796a8043557e864517ae6f5f&o=");
+}
+.slot-2{
+  background-image:url("https://www.andbeyond.com/wp-content/uploads/sites/5/colombo-sri-lanka.jpg");
+}
+.slot-3{
+  background-image:url("https://img.traveltriangle.com/blog/wp-content/uploads/2023/03/Gregory_lake_-_Nuwara_Eliya.jpg");
+}
+.slot-4{
+  background-image:url("https://www.investindubai.gov.ae/-/media/gathercontent/poi/b/burj-khalifa/fallback-image/burj-khalifa-det-3.jpg");
+}
+.slot-5{
+  background-image:url("https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg");
+}
+.outer{
+  margin-bottom: 10px;
+}
