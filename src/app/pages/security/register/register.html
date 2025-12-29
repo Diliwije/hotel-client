@@ -1,5 +1,6 @@
+<!--
 <div class="main-outer">
-  <form>
+  <form [formGroup]="form" (ngSubmit)="createUser()">
     <div class="container">
       <h3 style="margin-bottom: 20px;"> Create an Account</h3>
       <div class="row">
@@ -11,6 +12,7 @@
               type="text"
               matInput
               placeholder="Dilshan"
+              formControlName="firstName"
             />
           </mat-form-field>
         </div>
@@ -23,6 +25,7 @@
               type="text"
               matInput
               placeholder="Wijerathna"
+              formControlName="lastName"
             />
           </mat-form-field>
         </div>
@@ -33,6 +36,7 @@
             <input
               matInput
               type="email"
+              formControlName="email"
             />
           </mat-form-field>
         </div>
@@ -43,6 +47,7 @@
             <input
               matInput
               type="password"
+              formControlName="password"
             />
           </mat-form-field>
         </div>
@@ -53,18 +58,14 @@
               <input
                 matInput
                 type="contact"
+                formControlName="contact"
               />
             </mat-form-field>
           </div>
 
 
-
-
-
-
-
         <div class="col-12" style="text-align: center;">
-          <button  matButton="filled" color="primary" routerLink="/security/register-verification/abc@gmail.com" > Create Account</button>
+          <button [disabled]="form.invalid || loading"  matButton="filled" color="primary" type="submit" > Create Account</button>
           <br>
           <br>
         </div>
@@ -85,4 +86,81 @@
       </div>
     </div>
   </form>
+</div>
+-->
+
+<div class="main-outer">
+  <form [formGroup]="form" (ngSubmit)="createUser()">
+    <div class="container">
+      <h3 style="margin-bottom: 20px">Create an Account</h3>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>First name</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Saman"
+              formControlName="firstName"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-sm-6">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Last name</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Bandara"
+              formControlName="lastName"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Enter your email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              formControlName="email"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Enter your Password</mat-label>
+            <input
+              type="password"
+              formControlName="password"
+              matInput
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Contact Number</mat-label>
+            <input
+              type="tel"
+              matInput
+              formControlName="contact"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <button [disabled]="form.invalid || loading" class="col-12" matButton="filled" color="primary" type="submit">Create Account</button>
+        </div>
+        <div class="col-12" style="text-align: center">
+          <br>
+          <br>
+          OR
+          <br>
+          <br>
+        </div>
+        <div class="col-12">
+          <button class="col-12" matButton="tonal" routerLink="/security/login">Already have an Account</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
 </div>

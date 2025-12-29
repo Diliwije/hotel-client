@@ -10,6 +10,7 @@ import {ResetPwdVerification} from './pages/security/reset-pwd-verification/rese
 import {ResetPwd} from './pages/security/reset-pwd/reset-pwd';
 import {Settings} from './pages/settings/settings';
 import {SearchResult} from './pages/search-result/search-result';
+import {authGuard} from './guards/auth-guard';
 
 export const routes: Routes = [
   {
@@ -49,6 +50,7 @@ export const routes: Routes = [
   {
     path: 'settings',
     component:Settings,
+    canActivate:[authGuard]
   },
 
   {
