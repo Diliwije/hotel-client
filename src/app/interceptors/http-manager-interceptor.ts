@@ -14,6 +14,8 @@ export const httpManagerInterceptor: HttpInterceptorFn = (req, next) => {
 
   if (cookieService.tokenExists('token')){
     const token=cookieService.getToken('token');
+    console.log("Token added to request: ", token);
+
     req=req.clone({
       headers:req.headers.set('Authorization','Bearer '+token)
     });

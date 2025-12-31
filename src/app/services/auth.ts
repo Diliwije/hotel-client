@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root',
 })
 export class Auth {
-  baseUrl = environment.baseUrl + 'user-service/api/v1/users/visitors';
+  baseUrl = environment.baseUrl + 'user-service/api/v1/users/visitors/';
 
   constructor(private http: HttpClient) {
   }
@@ -21,5 +21,28 @@ export class Auth {
       contact: contact
     })
   }
+
+  public login(email:any, password:any):Observable<any>{
+    return this.http.post(this.baseUrl+'login',{
+      email:email,
+      password:password
+    })
+  }
+
+
+
+  public verify( otp: any,email: any ): Observable<any> {
+    return this.http.post(this.baseUrl + 'verify-email?email='+email+'&otp='+otp, {
+
+    })
+  }
+
+
+/*  public resend(email: any): Observable<any> {
+    return this.http.post(this.baseUrl + 'verify-email?email=', {
+      // email: email,
+      // otp: otp
+    })
+  }*/
 
 }

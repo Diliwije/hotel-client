@@ -33,7 +33,7 @@ loading: boolean = false;
   ngOnInit(): void {
 setTimeout(()=>{
 this.cookieManager.clearAll();
-})
+},100)
   }
 
   form = new FormGroup({
@@ -76,9 +76,12 @@ this.cookieManager.clearAll();
       console.log("hello");
     this.router.navigateByUrl('/security/register-verification/'+this.form.value.email?.trim());
     alert('User created successfully');
-    },error=>{
-      this.loading = false;
-    })
+    },error => {
+        this.loading = false;
+        console.error("Registration error:", error); // console එකේ error එක බලාගන්න
+        alert('Registration failed. Please check the console or backend.');
+      }
+    );
   }
 
 }
