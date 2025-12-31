@@ -1,59 +1,104 @@
-# HotelClient
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+```markdown
+# HotelClient - Hotel Booking System (Web)
 
-## Development server
+A modern, responsive hotel booking web application built with **Angular 21**. This client application provides a seamless user experience for searching hotels, managing bookings, and user authentication.
 
-To start a local development server, run:
+## 🚀 Features
 
-```bash
+-   **User Authentication**: Comprehensive security module including Login, Registration (with OTP verification), and Forgot Password functionality.
+-   **Hotel Search**: Advanced search interface for finding stays based on destination, dates, and visitor count.
+-   **Interactive Maps**: Google Maps integration to view hotel locations.
+-   **User Dashboard**: Profile management system to update personal details and profile pictures.
+-   **Booking History**: Dedicated section for users to view and manage their previous and upcoming stays.
+-   **Modern UI**: Built with Angular Material and SCSS, ensuring a high-quality, responsive design.
+-   **SSR Support**: Server-Side Rendering enabled for better performance and SEO.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Angular 21.0.0](https://angular.dev/)
+-   **Language**: [TypeScript 5.9.2](https://www.typescriptlang.org/)
+-   **UI Components**: [Angular Material 21.0.3](https://material.angular.dev/)
+-   **Styling**: SCSS (Modular architecture)
+-   **Maps**: [@angular/google-maps](https://github.com/angular/components/tree/main/src/google-maps)
+-   **Utilities**: `ngx-cookie-service`, `RxJS`
+-   **Test Runner**: [Vitest](https://vitest.dev/)
+-   **Runtime**: Node.js 20+
+
+## 📁 Project Structure
+```
+text
+src/
+├── app/
+│   ├── components/     # Reusable UI elements (Header, Footer)
+│   ├── pages/          # Main application views (Home, Search, Security, Settings)
+│   ├── guards/         # Route protection logic
+│   ├── services/       # API interaction and state management
+│   ├── interceptors/   # HTTP request/response modification
+│   └── app.routes.ts   # Client-side routing configuration
+├── environments/       # Environment specific variables
+└── styles.scss         # Global styles and variables
+```
+## ⚙️ Getting Started
+
+### Prerequisites
+
+-   [Node.js](https://nodejs.org/) (Recommended: v20.x or higher)
+-   [Angular CLI](https://github.com/angular/angular-cli) installed globally (`npm install -g @angular/cli`)
+
+### Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/hotel-client.git
+    cd hotel-client
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+### Development Server
+
+Run the application locally:
+```
+bash
 ng serve
 ```
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Configuration
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Ensure your backend API endpoint is correctly set in `src/environments/environment.development.ts`:
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+typescript
+export const environment = {
+  baseUrl: 'http://localhost:9090/' // Replace with your backend URL
+};
 ```
+## 🏗️ Building and Testing
 
-## Building
-
-To build the project run:
-
-```bash
+### Build
+To build the project for production:
+```
+bash
 ng build
 ```
+The build artifacts will be stored in the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
+### Running Tests
+Execute unit tests using Vitest:
+```
+bash
 ng test
 ```
+## 🛡️ Security
+The application implements an `authGuard` to protect private routes (like `/settings`) and utilizes an `http-manager-interceptor` to automatically attach Bearer tokens to outgoing HTTP requests.
 
-## Running end-to-end tests
+## 📄 License
+This project is licensed under the MIT License. (See `src/app/components/footer-component/footer-component.html` for attribution details).
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+---
+Coded with ❤️ for travelers.
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
